@@ -24,51 +24,77 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical"
-            android:gravity="center">
-
-            <ImageButton
-                android:id="@+id/imageIB_add"
-                android:layout_width="300dp"
-                android:layout_height="300dp"/>
-
-            <EditText
-                android:id="@+id/foodnameET_add"
-                android:layout_width="match_parent"
-                android:layout_height="70dp"
-                android:layout_marginHorizontal="50dp"
-                android:hint="음식 이름"
-                android:gravity="center"/>
+            android:layout_margin="15dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginHorizontal="50dp">
-
-                <EditText
-                    android:id="@+id/kcalET_add"
-                    android:layout_width="match_parent"
-                    android:layout_height="70dp"
-                    android:layout_weight="1"
-                    android:hint="칼로리"
-                    android:gravity="center"/>
+                android:orientation="horizontal">
 
                 <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:text="kcal"
-                    android:textSize="30dp"
-                    android:layout_weight="3"
-                    android:gravity="bottom"/>
+                    android:id="@+id/usernameTV_main"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="###"
+                    android:textSize="35dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="님 환영합니다"
+                    android:textSize="35dp"/>
 
             </LinearLayout>
 
-            <Button
-                android:id="@+id/addBT_add"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="추가하기"
-                android:textSize="30dp"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_margin="15dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="오늘 섭취한 칼로리"
+                        android:textSize="20dp"/>
+
+                    <ProgressBar
+                        android:id="@+id/gagebarPB_main"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:max="100"
+                        android:progress="0"
+                        android:indeterminate="false"
+                        android:progressDrawable="@android:drawable/progress_horizontal" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_margin="15dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="오늘 섭취한 음식들"
+                        android:textSize="20dp"/>
+
+                    <ListView
+                        android:id="@+id/foodlistLV_main"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+
+                </LinearLayout>
+
+            </LinearLayout>
 
         </LinearLayout>
 
